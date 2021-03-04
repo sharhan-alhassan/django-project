@@ -2,15 +2,15 @@
 
 
 **Note for git**
---git init 
---git remote -v 
---git remote add origin <url>
---git pull origin main --allow-unrelated-histories
---git add . 
---git commit -m "msg"
---git push origin main
+- git init 
+- git remote -v 
+- git remote add origin <url>
+- git pull origin main --allow-unrelated-histories
+- git add . 
+- git commit -m "msg"
+- git push origin main
 
-# RUN SERVER 
+# Run server 
 1. python manage.py runserver OR
 2. ./manage runserver
 
@@ -22,12 +22,13 @@
 ### python manage.py migrate: 
 *This command looks at the INSTALLED_APPS in mysite/settings.py and creates any necessary Databases tables according to the Database settings*
 
-# CREATING MODELS: Essentially create Database Layout with additional metadata
+# Creating models: 
+Essentially create Database Layout with additional metadata
 1. In this Poll app, we will create two models:
 - Question model: Has a question and a publication date
 2. Choice model: Has 2 fields
-    a) The text of the choice
-    b) A vote tally
+    - The text of the choice
+    - A vote tally
 3. Each Choice is associated with a Question 
 All these are represented by Python Classes
 ## NB:
@@ -37,7 +38,7 @@ in machine-friendly format. You’ll use this value in
 your Python code, and your database will use it as 
 the column name.
 
-# ACTIVATING MODELS
+# Activating models
 - Philosophy:
 Django apps are “pluggable”: You can use an app in 
 multiple projects, and you can distribute apps, 
@@ -79,22 +80,22 @@ Remember the three-step guide to making model changes:
 2. Run python manage.py makemigrations <app-name> to create migrations for those changes
 3. Run python manage.py migrate to apply those changes to the database.
 
-# PLAYING WITH THE PYTHON SHELL API
+# Playing with the python shell API
 - python manage.py shell
 
 - It’s important to add __str__() methods to your models, not only for your own convenience when dealing with the interactive prompt, but also because objects’ representations are used throughout Django’s automatically-generated admin.
 
-# DJANGO ADMIN
+# Django Admin
 - python manage.py createsuperuser //to create
 username: admin
 email: sharhanalhassan@gmail.com
 password: mohammed
 
-# MAKE THE POLL APP MODIFICATION IN THE ADMIN
+# Make the poll App modification in the admin
 - We need to tell the Admin that Question objects have 
 an admin interface.
 
-# VIEWS
+# Views
 - Each view is responsible for doing one of two things:
 1. return an HttpResponse containing content for requested page
 2. Or raising an exception such as Http404 
@@ -110,7 +111,7 @@ template system -or not
 - Question “results” page – displays results for a particular question.
 - Vote action – handles voting for a particular choice in a particular question.
 
-# TEMPLATES
+## TEMPLATES
 - The render() function takes the following 
 1. request object as first argument 
 2. template name as second argument 
