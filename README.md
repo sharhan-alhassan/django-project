@@ -22,7 +22,7 @@
 ### python manage.py migrate: 
 *This command looks at the INSTALLED_APPS in mysite/settings.py and creates any necessary Databases tables according to the Database settings*
 
-# Creating models: 
+## Creating models: 
 Essentially create Database Layout with additional metadata
 1. In this Poll app, we will create two models:
 - Question model: Has a question and a publication date
@@ -38,7 +38,7 @@ in machine-friendly format. You’ll use this value in
 your Python code, and your database will use it as 
 the column name.
 
-# Activating models
+## Activating models
 - Philosophy:
 Django apps are “pluggable”: You can use an app in 
 multiple projects, and you can distribute apps, 
@@ -80,27 +80,27 @@ Remember the three-step guide to making model changes:
 2. Run python manage.py makemigrations <app-name> to create migrations for those changes
 3. Run python manage.py migrate to apply those changes to the database.
 
-# Playing with the python shell API
+## Playing with the python shell API
 - python manage.py shell
 
 - It’s important to add __str__() methods to your models, not only for your own convenience when dealing with the interactive prompt, but also because objects’ representations are used throughout Django’s automatically-generated admin.
 
-# Django Admin
+## Django Admin
 - python manage.py createsuperuser //to create
 username: admin
 email: sharhanalhassan@gmail.com
 password: mohammed
 
-# Make the poll App modification in the admin
+## Make the poll App modification in the admin
 - We need to tell the Admin that Question objects have 
 an admin interface.
 
-# Views
+## Views
 - Each view is responsible for doing one of two things:
 1. return an HttpResponse containing content for requested page
 2. Or raising an exception such as Http404 
 
-# NB: 
+## NB: 
 - Views can read records from Database or not
 - It can use a template system such as Django's or third party python 
 template system -or not 
