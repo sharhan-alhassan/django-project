@@ -87,9 +87,9 @@ Remember the three-step guide to making model changes:
 
 ## Django Admin
 - python manage.py createsuperuser //to create
-username: admin
-email: sharhanalhassan@gmail.com
-password: mohammed
+- username: ***
+- email: ****
+- password: *****
 
 ## Make the poll App modification in the admin
 - We need to tell the Admin that Question objects have 
